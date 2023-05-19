@@ -45,6 +45,8 @@ Remember, always support artists and obtain music through legal and authorized m
 
 - [Git](https://github.com/git-guides/install-git) must be installed on your computer.
 
+- [ffmpeg](https://phoenixnap.com/kb/ffmpeg-windows) must be installed on your system. Keep note of where it is installed.
+
 ## Using the Script
 
 1. Open a terminal of your choice and enter the following commands:
@@ -60,12 +62,20 @@ cd youtube-to-spotify
 npm install
 ```
 
-3. Duplicate the `example-songs.json` file and rename to `songs.json`.
+3. Go to `utils.js` and find the following line of code (line 59):
+
+   ```js
+   proc.setFfmpegPath('C:/ffmpeg/bin/ffmpeg.exe')
+   ```
+
+   Here, you want to replace `C:/ffmpeg/bin/ffmpeg.exe` with the path of your ffmpeg binary on your system.
+
+4. Duplicate the `example-songs.json` file and rename to `songs.json`.
    Following the layout provided in `example-songs.json`, edit and add your own songs that you want to download.
 
    Note: for your very last song in `songs.json`, add a duplicate of that track entry, currently there is a bug where the very last track gets corrupted when transferred to spotify.
 
-4. Run the script using the following command and wait. It will take some time:
+5. Run the script using the following command and wait. It will take some time:
 
 ```bash
 node index.js
