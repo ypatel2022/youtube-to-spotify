@@ -1,0 +1,18 @@
+[
+  {
+    "album": "Geometry Dash",
+    "cover": "http://cdn.cloudflare.steamstatic.com/steam/apps/322170/capsule_616x353.jpg?t=1624472273",
+    "trackList": [
+      {
+        "title": "Geometry Dash Update 2.2 Sneak Peek 3",
+        "url": "https://www.youtube.com/watch?v=17YwHnNGScY",
+        "artists": ["RobTop"]
+      },
+      {
+        "title": "2 - Geometry Dash Update 2.2 Sneak Peek 3",
+        "url": "https://www.youtube.com/watch?v=17YwHnNGScY",
+        "artists": ["RobTopGames"]
+      }
+    ]
+  }
+]
