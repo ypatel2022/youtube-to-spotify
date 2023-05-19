@@ -3,7 +3,7 @@ import fs from 'fs'
 
 import { downloadImage, writeTags, convertToMp3, delay } from './utils.js'
 
-import data from './example-songs.json' assert { type: 'json' }
+import data from './songs.json' assert { type: 'json' }
 
 const videoFilePath = './output/video.mp4'
 
@@ -26,7 +26,7 @@ async function main() {
         quality: 'highestaudio',
       }).pipe(fs.createWriteStream(videoFilePath))
 
-      await convertToMp3(videoFilePath).then(() => {
+      await convertToMp3(videoFilePath).then(async () => {
         console.log(`Converted ${track.title} to mp3`)
 
         const tags = {
@@ -41,12 +41,12 @@ async function main() {
           fs.mkdirSync(finalAudioDirectory)
         }
 
-        writeTags(tags, coverFilepath, finalAudioFilepath).then(() => {
+        await writeTags(tags, coverFilepath, finalAudioFilepath).then(() => {
           console.log(`Wrote tags to ${track.title}`)
         })
       })
 
-      await delay(2000)
+      await delay(2500)
     }
   }
 }

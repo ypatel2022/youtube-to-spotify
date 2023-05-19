@@ -23,13 +23,14 @@ async function downloadImage(imageUrl, coverFilepath) {
 }
 
 async function writeTags(tags, coverFilepath, finalAudioFilepath) {
-  await delay(2500)
+  await delay(6000)
 
-  const songBuffer = fs.readFileSync(audioFilepath)
-  const coverBuffer = fs.readFileSync(coverFilepath)
+  const songBuffer = await fs.readFileSync(audioFilepath)
+  const coverBuffer = await fs.readFileSync(coverFilepath)
 
   const writer = new ID3Writer(songBuffer)
-  writer
+
+  await writer
     .setFrame('TIT2', tags.title)
     .setFrame('TPE1', tags.artists)
     .setFrame('TALB', tags.album)
@@ -39,16 +40,16 @@ async function writeTags(tags, coverFilepath, finalAudioFilepath) {
       description: 'Cover',
     })
 
-  writer.addTag()
+  await writer.addTag()
 
-  const taggedSongBuffer = Buffer.from(writer.arrayBuffer)
-  fs.writeFileSync(finalAudioFilepath, taggedSongBuffer)
+  const taggedSongBuffer = await Buffer.from(writer.arrayBuffer)
+  await fs.writeFileSync(finalAudioFilepath, taggedSongBuffer)
 
   await delay(1000)
 }
 
 async function convertToMp3() {
-  await delay(1500)
+  await delay(2500)
 
   var proc = new ffmpeg({
     source: videoFilepath,
