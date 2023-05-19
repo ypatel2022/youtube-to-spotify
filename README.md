@@ -51,16 +51,16 @@ Remember, always support artists and obtain music through legal and authorized m
 
 1. Open a terminal of your choice and enter the following commands:
 
-```bash
-git clone https://github.com/ypatel2022/youtube-to-spotify
-cd youtube-to-spotify
-```
+   ```bash
+   git clone https://github.com/ypatel2022/youtube-to-spotify
+   cd youtube-to-spotify
+   ```
 
 2. Install the required dependencies using the command:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Go to `utils.js` and find the following line of code (line 59):
 
@@ -77,11 +77,11 @@ npm install
 
 5. Run the script using the following command and wait. It will take some time:
 
-```bash
-node index.js
-```
+   ```bash
+   node index.js
+   ```
 
-5. Your spotify ready files will now be in the `/output` directory placed in a folder with the album name associated with that song. Transfer these to a directory where you want your music to be.
+6. Your spotify ready files will now be in the `/output` directory placed in a folder with the album name associated with that song. Transfer these to a directory where you want your music to be.
 
 ## Adding to Spotify
 
