@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon app.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ypatel2022/youtube-to-spotify.git"
@@ -18,7 +15,9 @@
   },
   "homepage": "https://github.com/ypatel2022/youtube-to-spotify#readme",
   "dependencies": {
-    "node-id3": "^0.2.6",
+    "browser-id3-writer": "^5.0.0",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
     "ytdl-core": "^4.11.4"
   }
 }
