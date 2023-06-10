@@ -8,6 +8,12 @@ import data from './songs.json' assert { type: 'json' }
 const videoFilePath = './output/video.mp4'
 
 async function main() {
+  // create output directory if it doesn't exist
+  const outputDirectory = './output'
+  if (!fs.existsSync(outputDirectory)) {
+    fs.mkdirSync(outputDirectory)
+  }
+
   for (let i = 0; i < data.length; i++) {
     const album = data[i]
 

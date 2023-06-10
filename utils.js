@@ -55,8 +55,7 @@ async function convertToMp3() {
     source: videoFilepath,
     nolog: true,
   })
-
-  proc.setFfmpegPath('C:/ffmpeg/bin/ffmpeg.exe')
+  proc.setFfmpegPath('./third-party/ffmpeg/bin/ffmpeg.exe')
 
   proc.toFormat('mp3')
 

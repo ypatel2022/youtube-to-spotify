@@ -62,26 +62,18 @@ Remember, always support artists and obtain music through legal and authorized m
    npm install
    ```
 
-3. Go to `utils.js` and find the following line of code (line 59):
-
-   ```js
-   proc.setFfmpegPath('C:/ffmpeg/bin/ffmpeg.exe')
-   ```
-
-   Here, you want to replace `C:/ffmpeg/bin/ffmpeg.exe` with the path of your ffmpeg binary on your system.
-
-4. Duplicate the `example-songs.json` file and rename to `songs.json`.
+3. Duplicate the `example-songs.json` file and rename to `songs.json`.
    Following the layout provided in `example-songs.json`, edit and add your own songs that you want to download.
 
    Note: for your very last song in `songs.json`, add a duplicate of that track entry, currently there is a bug where the very last track gets corrupted when transferred to spotify.
 
-5. Run the script using the following command and wait. It will take some time:
+4. Run the script using the following command and wait. It will take some time:
 
    ```bash
    node index.js
    ```
 
-6. Your spotify ready files will now be in the `/output` directory placed in a folder with the album name associated with that song. Transfer these to a directory where you want your music to be.
+5. Your spotify ready files will now be in the `/output` directory placed in a folder with the album name associated with that song. Transfer these to a directory where you want your music to be.
 
 ## Adding to Spotify
 
